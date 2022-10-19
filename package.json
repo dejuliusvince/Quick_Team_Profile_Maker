@@ -1,0 +1,26 @@
+{
+  "name": "quick_team_profiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dejuliusvince/Quick_Team_Profiler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dejuliusvince/Quick_Team_Profiler/issues"
+  },
+  "homepage": "https://github.com/dejuliusvince/Quick_Team_Profiler#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
