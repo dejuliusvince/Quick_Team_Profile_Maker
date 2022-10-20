@@ -1,5 +1,6 @@
 const Manager = require("../lib/Manager")
 
+//Test Manager.js using same logic as other test.js files
 describe("Manager", () => {
   describe("test Manager's properties", ()=>{
     it ("test all properties", () => {

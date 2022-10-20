@@ -1,5 +1,6 @@
 const Engineer = require("../lib/Engineer")
 
+//Test properties and methods from Engineer.js library
 describe("Engineer", () => {
   describe("test Engineer's properties", () => {
     it("test all properties", () => {

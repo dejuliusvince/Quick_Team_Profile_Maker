@@ -1,5 +1,6 @@
 const Intern = require("../lib/Intern")
 
+//Same workflow as other test.js files, but applied to Intern propertes and methods
 describe("Intern", () => {
   describe("test Intern's properties", () => {
     it("test all properties", () => {

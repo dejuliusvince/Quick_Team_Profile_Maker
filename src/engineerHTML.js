@@ -1,3 +1,5 @@
+//Need a function to generate Engineer to be called in index.js, use static html doc as a boilerplate
+
 function engineerCard(engineer){
     return `
     <div class="col-sm-4 mb-5">

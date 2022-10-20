@@ -1,3 +1,5 @@
+// Need to import all necessary libraries
+
 const inquirer = require("inquirer")
 const fs = require("fs")
 const Manager = require("./lib/Manager")
@@ -5,17 +7,20 @@ const Engineer = require("./lib/Engineer")
 const Intern = require("./lib/Intern")
 const Employee = require("./lib/Employee")
 
+
+//Need to import functions to generate HTML cards based on user input
 const managerCard = require("./src/managerHTML")
 const engineerCard = require("./src/engineerHTML")
 const internCard = require("./src/internHTML")
 
 
-
+//Function for html page boilerplate where cards will be displayed
 const generateHTML = require("./src/generateHTML")
 
-
+//Empty array to push Employee objects into as they are generated
 const employeeArray = []
 
+//Need to create an array of question objects for Manager, Engineer, and Intern
 const managerQuestions = [
   {
     type: "input",
@@ -85,6 +90,7 @@ const internQuestions = [
   },
 ]
 
+//Initialize app, create the Manager, and ask the user if they wish to proceed with adding more employees
 function init() {
   inquirer
     .prompt(managerQuestions)
@@ -98,6 +104,8 @@ function init() {
     })
 
 }
+
+//If the user wishes to proceed, calls addEmployee, if not, will generate the html document 
 
 function confirmProceed() {
   inquirer.prompt([{
@@ -115,6 +123,7 @@ function confirmProceed() {
     })
 }
 
+//Ask the user to choose between adding an Engineer or Intern, and call the cooresponding function
 function addEmployee() {
   inquirer.prompt([{
     type: "list",
@@ -154,6 +163,8 @@ function addIntern() {
   })
 }
 
+//Generate html page, looping through the array storing employee objects and 
+//create the individual cards using template literal in cooresponding HTML.js files
 function createHTML() {
     console.log(employeeArray)
     

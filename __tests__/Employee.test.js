@@ -1,5 +1,6 @@
 const Employee = require("../lib/Employee")
 
+//Need to test all properties and methods from Employee.js library
 describe("Employee", () => {
   describe("test Employee's properties", () => {
     it("test all properties", () => {

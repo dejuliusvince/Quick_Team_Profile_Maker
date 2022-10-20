@@ -1,3 +1,7 @@
+//Once all employee objects have been created from the responses to the inquirer prompts, will need a finction 
+//to generate the boilerplate for the html page that will contain the custom cards
+
+
 function generateHTML(cards){
  return `
  <!DOCTYPE html>
