@@ -6,6 +6,8 @@ const Intern = require("./lib/Intern")
 const Employee = require("./lib/Employee")
 
 const managerCard = require("./src/managerHTML")
+const engineerCard = require("./src/engineerHTML")
+const internCard = require("./src/internHTML")
 
 
 
@@ -162,10 +164,10 @@ function createHTML() {
           cards = cards + managerCard(employeeArray[i])
       }
       else if(employeeArray[i].getRole()==="Engineer"){
-          //same as manager card but for engineer
+          cards = cards + engineerCard(employeeArray[i])
       }
       else {
-        //same as above but for intern
+          cards = cards + internCard(employeeArray[i])
       }
     }
     fs.writeFileSync("./dist/teamprofiles.html", generateHTML(cards))
