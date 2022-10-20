@@ -56,6 +56,29 @@ const engineerQuestions = [
   },
 ]
 
+const internQuestions = [
+  {
+    type: "input",
+    message: "What is the name of the intern?",
+    name: "internName"
+  },
+  {
+    type: "input",
+    message: "What is the id of the engineer?",
+    name: "internId"
+  },
+  {
+    type: "input",
+    message: "What is the email of the engineer?",
+    name: "internEmail"
+  },
+  {
+    type: "input",
+    message: "What school does the intern attend?",
+    name: "internSchool"
+  },
+]
+
 function init() {
   inquirer
     .prompt(managerQuestions)
@@ -70,52 +93,63 @@ function init() {
 
 }
 
-function confirmProceed(){
+function confirmProceed() {
   inquirer.prompt([{
     type: "confirm",
     message: "Would you like to add another employee?",
-    name:"addAnother"
+    name: "addAnother"
   }])
-  .then(response=>{
-    if(addMore===true){
-      addEmployee()
-    }
-    else{
-      createHTML()
-    }
-  })
-}
-
-function addEmployee(){
-    inquirer.prompt([{
-      type: "list",
-      message: "Would you like to add an Engineer or Intern?",
-      choices:["Engineer","Intern"],
-      name: "selection"
-    }])
-    .then(response=>{
-      if(response.selection==="Engineer"){
-        addEngineer()
+    .then(response => {
+      if (addMore === true) {
+        addEmployee()
       }
       else {
-        addIntern()   
+        createHTML()
       }
     })
 }
 
-function addEngineer(){
-    inquirer.prompt(engineerQuestions)
-        .then(response=>{
-          //call function using
-        })
+function addEmployee() {
+  inquirer.prompt([{
+    type: "list",
+    message: "Would you like to add an Engineer or Intern?",
+    choices: ["Engineer", "Intern"],
+    name: "selection"
+  }])
+    .then(response => {
+      if (response.selection === "Engineer") {
+        addEngineer()
+      }
+      else {
+        addIntern()
+      }
+    })
 }
 
-function addIntern(){
+function addEngineer() {
+  inquirer.prompt(engineerQuestions)
+    .then(response => {
+      const engineer = new Manager(response.engineerName, response.engineerId, response.engineerEmail, response.engineerGitHub)
 
+      employeeArray.push(engineer)
+
+      confirmProceed()
+    })
 }
 
-function createHTML(){
+function addIntern() {
+  inquirer.prompt(internQuestions)
+  .then(response => {
+    const intern = new Intern(response.internName, response.internId, response.internEmail, response.internSchool)
 
+    employeeArray.push(intern)
+
+    confirmProceed()
+  })
+}
+
+function createHTML() {
+    console.log(employeeArray)
 }
 
 
