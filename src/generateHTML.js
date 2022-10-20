@@ -24,7 +24,7 @@ function generateHTML(cards){
               ${cards}
          </div>
 </body>
-</html
+</html>
  `
 }
 
