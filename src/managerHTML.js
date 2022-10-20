@@ -8,10 +8,10 @@ function managerCard(manager){
     <h3 class="text-white">${manager?.name}</h3>
     <h5 class="card-header text-white">Manager</h5>
   </div>
-  <div class="card-body">
+  <div class="card-body shadow">
     <ul class="list-group">
       <li class="list-group-item">ID: ${manager?.id} </li>
-      <li class="list-group-item">Email: ${manager?.email} </li>
+      <li class="list-group-item">Email: <a href="mailto:${manager?.email}">${manager?.email}</a></li>
       <li class="list-group-item">Office Number: ${manager?.officeNumber}</li>
     </ul>
   </div>

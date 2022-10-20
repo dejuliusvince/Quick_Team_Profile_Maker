@@ -57,7 +57,7 @@ const engineerQuestions = [
   },
   {
     type: "input",
-    message: "What is the github profile of the manager?",
+    message: "What is the github profile of the engineer?",
     name: "engineerGitHub"
   },
 ]
@@ -135,7 +135,7 @@ function addEmployee() {
 function addEngineer() {
   inquirer.prompt(engineerQuestions)
     .then(response => {
-      const engineer = new Manager(response.engineerName, response.engineerId, response.engineerEmail, response.engineerGitHub)
+      const engineer = new Engineer(response.engineerName, response.engineerId, response.engineerEmail, response.engineerGitHub)
 
       employeeArray.push(engineer)
 

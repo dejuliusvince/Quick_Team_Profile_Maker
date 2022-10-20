@@ -6,11 +6,11 @@ function engineerCard(engineer){
         <h3 class="text-white">${engineer?.name}</h3>
         <h5 class="card-header text-white">Engineer</h5>
       </div>
-    <div class="card-body">
+    <div class="card-body shadow">
       <ul class="list-group">
         <li class="list-group-item">ID: ${engineer?.id} </li>
-        <li class="list-group-item">Email: ${engineer?.email}</li>
-        <li class="list-group-item">School: ${engineer?.school}</li>
+        <li class="list-group-item">Email: <a href="mailto:${engineer?.name}">${engineer?.email}</a></li>
+        <li class="list-group-item">GitHub: <a href="http://github.com/${engineer?.github}">${engineer?.github}</a></li>
       </ul>
       </div>
       </div>

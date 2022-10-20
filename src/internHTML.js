@@ -6,10 +6,10 @@ function internCard(intern) {
         <h3 class="text-white">${intern?.name}</h3>
         <h5 class="card-header text-white">Intern</h5>
       </div>
-    <div class="card-body">
+    <div class="card-body shadow">
       <ul class="list-group">
         <li class="list-group-item">ID: ${intern?.id} </li>
-        <li class="list-group-item">Email: ${intern?.email}</li>
+        <li class="list-group-item">Email: <a href="mailto:${intern?.email}">${intern?.email}</a></li>
         <li class="list-group-item">School: ${intern?.school}</li>
       </ul>
       </div>
