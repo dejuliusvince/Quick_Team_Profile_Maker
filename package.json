@@ -22,6 +22,7 @@
   "homepage": "https://github.com/dejuliusvince/Quick_Team_Profiler#readme",
   "dependencies": {
     "inquirer": "^8.2.4",
-    "jest": "^29.2.1"
+    "jest": "^29.2.1",
+    "requirejs": "^2.3.6"
   }
 }

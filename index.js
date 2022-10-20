@@ -5,6 +5,10 @@ const Engineer = require("./lib/Engineer")
 const Intern = require("./lib/Intern")
 const Employee = require("./lib/Employee")
 
+const managerCard = require("./src/managerHTML")
+
+
+
 const generateHTML = require("./src/generateHTML")
 
 
@@ -100,7 +104,7 @@ function confirmProceed() {
     name: "addAnother"
   }])
     .then(response => {
-      if (addMore === true) {
+      if (response.addMore === true) {
         addEmployee()
       }
       else {
@@ -150,6 +154,21 @@ function addIntern() {
 
 function createHTML() {
     console.log(employeeArray)
+    
+
+    let cards = ""
+    for(let i = 0; i < employeeArray.length; i++){
+      if(employeeArray[i].getRole()==="Manager"){
+          cards = cards + managerCard(employeeArray[i])
+      }
+      else if(employeeArray[i].getRole()==="Engineer"){
+          //same as manager card but for engineer
+      }
+      else {
+        //same as above but for intern
+      }
+    }
+    fs.writeFileSync("./dist/teamprofiles.html", generateHTML(cards))
 }
 
 
