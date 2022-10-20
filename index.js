@@ -70,12 +70,12 @@ const internQuestions = [
   },
   {
     type: "input",
-    message: "What is the id of the engineer?",
+    message: "What is the id of the intern?",
     name: "internId"
   },
   {
     type: "input",
-    message: "What is the email of the engineer?",
+    message: "What is the email of the intern?",
     name: "internEmail"
   },
   {
@@ -106,7 +106,7 @@ function confirmProceed() {
     name: "addAnother"
   }])
     .then(response => {
-      if (response.addMore === true) {
+      if (response.addAnother === true) {
         addEmployee()
       }
       else {
