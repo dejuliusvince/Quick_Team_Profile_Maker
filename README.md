@@ -9,5 +9,6 @@ Each team generated will have one manager, and once the manager has been created
 ## Walkthrough Video
 The application's functionality can be demonstrated by following the link to the video below:
 
+https://drive.google.com/file/d/1XWfQzNH4J2TqRbu-ZutKxfMVIdGkK2WE/view?usp=sharing
 
 
